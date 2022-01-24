@@ -20,7 +20,7 @@ Para compilar y ejecutar la aplicación, se debe tener instalado Android Studio.
 
 Si solo se desea obtener el APK para poder instalarlo en cualquier dispositivo, debe dirigirse a Build -> Build Bundle(s) / APK(s) -> Build APK
 
-## Tests
+### Tests
 
 Se incluyen unos unit test por cada use case utilizado en la aplicación. Para correr los tests:
 1. Abra uno de los archivos presentes dentro de la carpeta de src/test/domain/use_case.
