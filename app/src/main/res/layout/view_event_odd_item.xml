@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="event"
+            type="com.example.sportway.domain.model.Event" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        tools:layout_height="68dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/event_gradient_background">
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{event.status}"
+                tools:text="Finalizado"
+                android:textColor="@color/screen_background"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@+id/date_text"
+                app:layout_constraintEnd_toEndOf="@+id/date_text"
+                app:layout_constraintStart_toStartOf="@+id/date_text" />
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{event.matchDay}"
+                tools:text="23-12-2021"
+                android:textColor="@color/screen_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/hour_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{event.matchHour}"
+                tools:text="21:45"
+                android:textColor="@color/screen_background"
+                app:layout_constraintEnd_toEndOf="@+id/date_text"
+                app:layout_constraintStart_toStartOf="@+id/date_text"
+                app:layout_constraintTop_toBottomOf="@+id/date_text" />
+
+            <TextView
+                android:id="@+id/teams_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="1dp"
+                tools:text="Man United vs Chelsea FC"
+                android:text="@{@string/vs_teams(event.homeTeam , event.awayTeam)}"
+                android:textAlignment="center"
+                android:textColor="@color/screen_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/more_info_arrow_ic"
+                app:layout_constraintStart_toEndOf="@+id/date_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/score_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="16dp"
+                tools:text="2 - 3"
+                android:text="@{@string/vs_teams(event.homeScore , event.awayScore)}"
+                android:textAlignment="center"
+                android:textColor="@color/screen_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/more_info_arrow_ic"
+                app:layout_constraintStart_toEndOf="@+id/date_text"
+                app:layout_constraintTop_toBottomOf="@+id/teams_text"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/more_info_arrow_ic"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="4dp"
+                android:rotation="270"
+                android:src="@drawable/ic_arrow_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/screen_background" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Sportway</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="vs_teams">%1$s vs %2$s</string>
+    <string name="score_teams">%1$d - %2$d</string>
+    <string name="stats_button_text">Estadísticas</string>
+    <string name="events_title">Partidos</string>
+    <string name="teams_title">Equipos</string>
+    <string name="stats_title">Estadísticas</string>
+    <string name="connection_error">Hubo un error. Verifique su conexión a Internet</string>
+    <string name="unexpected_error">Hubo un error inesperado. Intente más tarde.</string>
+    <string name="event_details_title">Detalles del partido</string>
 </resources>

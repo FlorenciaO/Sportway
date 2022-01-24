@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="stat"
+            type="com.example.sportway.domain.model.Stat" />
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@color/screen_background"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/home_stat_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="8"
+            android:text="@{Integer.toString(stat.homeValue)}"/>
+        <TextView
+            android:id="@+id/title_stat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            tools:text="Tiros al arco"
+            android:text="@{stat.title}"/>
+        <TextView
+            android:id="@+id/away_stat_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="12"
+            android:text="@{Integer.toString(stat.awayValue)}"/>
+
+    </LinearLayout>
+</layout>

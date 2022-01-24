@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:textColor="@color/secondary_grey_text"
+    android:textSize="16sp"
+    tools:text="Finalizado" />
