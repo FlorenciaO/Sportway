@@ -58,12 +58,6 @@ class EventListFragment: Fragment(), EventListAdapter.Listener {
                 it.error?.let {
                     code -> uiEventListener.showError(code)
                 }
-
-                it.navigateTo?.let { event ->
-                    val action =
-                        MainViewPagerFragmentDirections.actionMainViewPagerFragmentToEventDetailsFragment(event)
-                    findNavController().navigate(action)
-                }
             }
         }
 
@@ -71,6 +65,8 @@ class EventListFragment: Fragment(), EventListAdapter.Listener {
     }
 
     override fun onEventClicked(event: Event) {
-        viewModel.onUIEvent(EventListUIEvent.onEventClicked(event))
+        val action =
+            MainViewPagerFragmentDirections.actionMainViewPagerFragmentToEventDetailsFragment(event)
+        findNavController().navigate(action)
     }
 }

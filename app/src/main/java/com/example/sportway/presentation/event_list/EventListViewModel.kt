@@ -63,12 +63,4 @@ class EventListViewModel
             error = errorCode ?: ErrorCode.UNEXPECTED_ERROR
         )
     }
-
-    fun onUIEvent(uiEvent: EventListUIEvent) {
-        when(uiEvent) {
-            is EventListUIEvent.onEventClicked -> {
-                _eventListState.value = EventListState(navigateTo = uiEvent.event)
-            }
-        }
-    }
 }
