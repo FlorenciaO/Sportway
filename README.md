@@ -26,8 +26,8 @@ Si solo se desea obtener el APK para poder instalarlo en cualquier dispositivo, 
 
 ### Tests
 
-Se incluyen unos unit test por cada use case utilizado en la aplicación. Para correr los tests:
+Se incluyen algunos unit test por cada use case y view model utilizado en la aplicación. Para correr los tests:
 
-1.  Abra uno de los archivos presentes dentro de la carpeta de src/test/domain/use_case.
+1.  Abra uno de los archivos presentes dentro de la carpeta de src/test/domain/use_case (Use cases) o src/test/presentation (View models).
 2.  Espere a que el IDE sincronice
 3.  Ejecute los tests clickeando en el icono de Run a la izquierda de la declaracion de la clase.

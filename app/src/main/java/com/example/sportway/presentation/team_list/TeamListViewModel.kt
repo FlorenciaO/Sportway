@@ -52,6 +52,7 @@ class TeamListViewModel @Inject constructor(
             }
         }.launchIn(viewModelScope)
     }
+
     private fun showLoading() {
         _teamListState.value = TeamListState(isLoading = true)
     }
