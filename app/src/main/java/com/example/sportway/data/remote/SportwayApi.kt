@@ -1,17 +1,16 @@
 package com.example.sportway.data.remote
 
-import com.example.sportway.common.Constants.BASIC_AUTH_TOKEN
+import com.example.sportway.BuildConfig
 import com.example.sportway.data.remote.dto.*
-import com.example.sportway.data.remote.dto.LoginRequestDto
 import retrofit2.http.*
 
 interface SportwayApi {
 
     @POST("/api/1.0/auth/users/login/anonymous")
-    @Headers("Content-Type: application/json",
-    "Authorization: $BASIC_AUTH_TOKEN")
+    @Headers("Content-Type: application/json")
     suspend fun getAccessToken(
-        @Body body: LoginRequestDto
+        @Body body: LoginRequestDto,
+        @Header("Authorization") basicToken: String = BuildConfig.BASIC_AUTH_TOKEN
     ): AccessTokenDto
 
     @GET("/api/1.0/sport/events")

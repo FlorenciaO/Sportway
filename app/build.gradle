@@ -16,6 +16,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+        buildConfigField("String", "BASIC_AUTH_TOKEN", BASIC_AUTH_TOKEN)
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
