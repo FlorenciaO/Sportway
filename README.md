@@ -10,9 +10,6 @@
 ### Introduccion
 Sportway es una aplicación móvil nativa que permite visualizar información detallada de distintos partidos que se hayan jugado, estén 
 jugando o incluso que se vayan a jugar, así como también, los equipos de fútbol disponibles.
-Toda la información es obtenida de servicios proporcionados por la api de FZ Sports.
-
-NOTA: Para seguridad, se mantuvo el token de primera autenticación guardado localmente.
 
 ### Conceptos aplicados
 * Clean Architecture (basado en las 3 capas principales de presentation, domain y data)
