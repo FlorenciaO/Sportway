@@ -28,8 +28,8 @@ NOTA: Para seguridad, se mantuvo el token de primera autenticación guardado loc
 
 ### Screenshots
 * Lista de partidos
-![Lista de partidos](screenshots/partidos.jpg)
+<img src="screenshots/partidos.jpg" width="300">
 * Lista de equipos
-![Lista de equipos](screenshots/equipos.jpg)
+<img src="screenshots/equipos.jpg" width="300">
 * Detalles de partido
-![Detalles de partido](screenshots/detalles.jpg)
+<img src="screenshots/detalles.jpg" width="300">
